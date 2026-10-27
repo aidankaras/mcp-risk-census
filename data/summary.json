@@ -1,0 +1,25 @@
+{
+  "n_servers": 109,
+  "pct": {
+    "shell_exec": 65,
+    "eval_dynamic": 16,
+    "fs_write": 77,
+    "sql_raw": 7,
+    "outbound_http": 84,
+    "security_md": 36,
+    "path_guard": 37,
+    "input_schema": 79,
+    "auth_mentioned": 78,
+    "hardcoded_key": 1,
+    "remote": 54
+  },
+  "mean_risk": 4.95,
+  "mean_hygiene": 2.28,
+  "spearman_stars_hygiene": -0.139,
+  "spearman_stars_risk": -0.146,
+  "hygiene_above_median_stars": 2.44,
+  "hygiene_below_median_stars": 2.13,
+  "remote_without_auth_signal": 9,
+  "remote_total": 59,
+  "high_risk_low_hygiene": 8
+}

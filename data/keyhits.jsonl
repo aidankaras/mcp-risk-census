@@ -1,0 +1,197 @@
+{"repo": "google-gemini/gemini-cli", "file": "packages/cli/src/utils/gitUtils.test.ts", "line": 84, "ctx": "'https://ghp_xx\u2026REDACTED@github.com/owner/repo.git',"}
+{"repo": "google-gemini/gemini-cli", "file": "packages/core/src/services/environmentSanitization.test.ts", "line": 123, "ctx": "GITHUB_TOKEN_GHP: 'ghp_xx\u2026REDACTED',"}
+{"repo": "google-gemini/gemini-cli", "file": "packages/core/src/services/environmentSanitization.test.ts", "line": 141, "ctx": "SLACK_XOXB: 'xoxb-x\u2026REDACTED',"}
+{"repo": "google-gemini/gemini-cli", "file": "packages/core/src/services/environmentSanitization.test.ts", "line": 143, "ctx": "SLACK_XOXP: 'xoxp-x\u2026REDACTED',"}
+{"repo": "google-gemini/gemini-cli", "file": "packages/core/src/services/environmentSanitization.test.ts", "line": 221, "ctx": "GH_TOKEN: 'ghp_xx\u2026REDACTED',"}
+{"repo": "google-gemini/gemini-cli", "file": "packages/core/src/services/environmentSanitization.test.ts", "line": 238, "ctx": "HOME: 'ghp_xx\u2026REDACTED',"}
+{"repo": "google-gemini/gemini-cli", "file": "packages/core/src/services/environmentSanitization.test.ts", "line": 257, "ctx": "MY_SAFE_VAR: 'ghp_xx\u2026REDACTED',"}
+{"repo": "google-gemini/gemini-cli", "file": "packages/core/src/services/environmentSanitization.test.ts", "line": 270, "ctx": "GEMINI_CLI_INTERNAL: 'ghp_xx\u2026REDACTED',"}
+{"repo": "google-gemini/gemini-cli", "file": "packages/core/src/services/environmentSanitization.test.ts", "line": 366, "ctx": "GITHUB_TOKEN_GHP: 'ghp_xx\u2026REDACTED',"}
+{"repo": "google-gemini/gemini-cli", "file": "packages/core/src/services/sandboxManager.test.ts", "line": 262, "ctx": "GITHUB_TOKEN: 'ghp_xx\u2026REDACTED',"}
+{"repo": "github/github-mcp-server", "file": "pkg/http/middleware/token_test.go", "line": 42, "ctx": "authHeader:         \"Bearer ghp_xx\u2026REDACTED\","}
+{"repo": "github/github-mcp-server", "file": "pkg/http/middleware/token_test.go", "line": 45, "ctx": "expectedToken:      \"ghp_xx\u2026REDACTED\","}
+{"repo": "github/github-mcp-server", "file": "pkg/http/middleware/token_test.go", "line": 50, "ctx": "authHeader:         \"bearer ghp_xx\u2026REDACTED\","}
+{"repo": "github/github-mcp-server", "file": "pkg/http/middleware/token_test.go", "line": 53, "ctx": "expectedToken:      \"ghp_xx\u2026REDACTED\","}
+{"repo": "github/github-mcp-server", "file": "pkg/http/middleware/token_test.go", "line": 58, "ctx": "authHeader:         \"ghp_xx\u2026REDACTED\","}
+{"repo": "github/github-mcp-server", "file": "pkg/http/middleware/token_test.go", "line": 61, "ctx": "expectedToken:      \"ghp_xx\u2026REDACTED\","}
+{"repo": "github/github-mcp-server", "file": "pkg/http/middleware/token_test.go", "line": 224, "ctx": "req.Header.Set(headers.AuthorizationHeader, \"Bearer ghp_xx\u2026REDACTED\")"}
+{"repo": "github/github-mcp-server", "file": "pkg/http/middleware/pat_scope_test.go", "line": 69, "ctx": "Token:     \"ghp_xx\u2026REDACTED\","}
+{"repo": "github/github-mcp-server", "file": "pkg/http/middleware/pat_scope_test.go", "line": 80, "ctx": "Token:     \"ghp_xx\u2026REDACTED\","}
+{"repo": "github/github-mcp-server", "file": "pkg/http/middleware/pat_scope_test.go", "line": 91, "ctx": "Token:     \"ghp_xx\u2026REDACTED\","}
+{"repo": "github/github-mcp-server", "file": "pkg/http/middleware/pat_scope_test.go", "line": 171, "ctx": "Token:     \"ghp_xx\u2026REDACTED\","}
+{"repo": "yusufkaraaslan/Skill_Seekers", "file": "src/skill_seekers/cli/storage/s3_storage.py", "line": 43, "ctx": "aws_access_key_id='AKIAIO\u2026REDACTED',"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_config_comprehensive.py", "line": 45, "ctx": "aws_access_key_id='AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_config_comprehensive.py", "line": 60, "ctx": "assert config.aws_access_key_id == 'AKIAIO\u2026REDACTED'"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_config_comprehensive.py", "line": 153, "ctx": "'AWS_ACCESS_KEY_ID': 'AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_config_comprehensive.py", "line": 162, "ctx": "assert config.aws_access_key_id == 'AKIAIO\u2026REDACTED'"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_config_comprehensive.py", "line": 379, "ctx": "aws_access_key_id='AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_config_comprehensive.py", "line": 396, "ctx": "config = ServerConfig(aws_access_key_id='AKIAIO\u2026REDACTED')  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_aws_client.py", "line": 97, "ctx": "aws_access_key_id='AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_aws_client.py", "line": 107, "ctx": "assert manager._aws_access_key_id == 'AKIAIO\u2026REDACTED'"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_aws_client.py", "line": 139, "ctx": "os.environ['AWS_ACCESS_KEY_ID'] = 'AKIAIO\u2026REDACTED'  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_aws_client.py", "line": 151, "ctx": "assert manager._aws_access_key_id == 'AKIAIO\u2026REDACTED'"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_config_extended.py", "line": 27, "ctx": "aws_access_key_id='AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_config_extended.py", "line": 42, "ctx": "assert config.aws_access_key_id == 'AKIAIO\u2026REDACTED'  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_config_extended.py", "line": 118, "ctx": "aws_access_key_id='AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_config_extended.py", "line": 139, "ctx": "'AWS_ACCESS_KEY_ID': 'AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_config.py", "line": 253, "ctx": "aws_access_key_id='AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/amazon-translate-mcp-server/tests/test_config.py", "line": 275, "ctx": "'AWS_ACCESS_KEY_ID': 'AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/aws-serverless-mcp-server/tests/test_data_scrubber.py", "line": 32, "ctx": "text = 'Access key: AKIAIO\u2026REDACTED'  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/aws-serverless-mcp-server/tests/test_data_scrubber.py", "line": 34, "ctx": "assert 'AKIAIO\u2026REDACTED' not in result  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/aws-serverless-mcp-server/tests/test_data_scrubber.py", "line": 215, "ctx": "'NORMAL_VAR': 'AKIAIO\u2026REDACTED',  # Looks like access key  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/aws-serverless-mcp-server/tests/test_data_scrubber.py", "line": 266, "ctx": "'Access Key: AKIAIO\u2026REDACTED\\n'  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/aws-serverless-mcp-server/tests/test_data_scrubber.py", "line": 281, "ctx": "assert 'AKIAIO\u2026REDACTED' not in result  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/aws-serverless-mcp-server/tests/test_data_scrubber.py", "line": 303, "ctx": "'nested': {'key': 'AKIAIO\u2026REDACTED'},  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/aws-serverless-mcp-server/tests/test_data_scrubber.py", "line": 319, "ctx": "'AccessKeyId': 'AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/aws-serverless-mcp-server/tests/test_data_scrubber.py", "line": 323, "ctx": "'AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/aws-serverless-mcp-server/tests/test_data_scrubber.py", "line": 354, "ctx": "'AKIAIO\u2026REDACTED'  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/aws-healthomics-mcp-server/tests/test_transport_and_multitenant_edges.py", "line": 433, "ctx": "access_key_id='AKIAIO\u2026REDACTED',"}
+{"repo": "awslabs/mcp", "file": "src/aws-healthomics-mcp-server/tests/test_transport_and_multitenant_edges.py", "line": 578, "ctx": "access_key_id='AKIAIO\u2026REDACTED',"}
+{"repo": "awslabs/mcp", "file": "src/aws-healthomics-mcp-server/tests/test_transport_and_multitenant_edges.py", "line": 629, "ctx": "access_key_id='AKIAIO\u2026REDACTED',"}
+{"repo": "awslabs/mcp", "file": "src/aws-healthomics-mcp-server/tests/test_inbound_explicit.py", "line": 36, "ctx": "FAKE_ACCESS_KEY_ID = 'AKIAFA\u2026REDACTED'  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/iam-mcp-server/tests/test_server.py", "line": 503, "ctx": "'AccessKeyId': 'AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/iam-mcp-server/tests/test_server.py", "line": 726, "ctx": "access_key_id='AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/iam-mcp-server/tests/test_server.py", "line": 839, "ctx": "'AccessKeyMetadata': [{'AccessKeyId': 'AKIAIO\u2026REDACTED'}]  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/iam-mcp-server/tests/test_server.py", "line": 943, "ctx": "'AccessKeyId': 'AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/iam-mcp-server/tests/test_server.py", "line": 961, "ctx": "== 'AKIAIO\u2026REDACTED'  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/iam-mcp-server/tests/test_server.py", "line": 995, "ctx": "access_key_id='AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/iam-mcp-server/tests/test_server.py", "line": 1013, "ctx": "access_key_id='AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/iam-mcp-server/tests/test_server.py", "line": 2088, "ctx": "'AccessKeyId': 'AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/ccapi-mcp-server/tests/test_session_management.py", "line": 42, "ctx": "'AWS_ACCESS_KEY_ID': 'AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/ccapi-mcp-server/tests/test_session_management.py", "line": 171, "ctx": "'AWS_ACCESS_KEY_ID': 'AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/ccapi-mcp-server/tests/test_session_management.py", "line": 251, "ctx": "'AWS_ACCESS_KEY_ID': 'AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/aws-location-mcp-server/tests/test_server.py", "line": 1032, "ctx": "'AWS_ACCESS_KEY_ID', 'AKIAIO\u2026REDACTED'"}
+{"repo": "awslabs/mcp", "file": "src/aws-location-mcp-server/tests/test_server.py", "line": 1045, "ctx": "kwargs['aws_access_key_id'] == 'AKIAIO\u2026REDACTED'"}
+{"repo": "awslabs/mcp", "file": "src/aws-location-mcp-server/tests/test_server.py", "line": 1231, "ctx": "'AWS_ACCESS_KEY_ID', 'AKIAIO\u2026REDACTED'"}
+{"repo": "awslabs/mcp", "file": "src/aws-location-mcp-server/tests/test_server.py", "line": 1243, "ctx": "assert kwargs['aws_access_key_id'] == 'AKIAIO\u2026REDACTED'"}
+{"repo": "awslabs/mcp", "file": "src/aws-location-mcp-server/tests/test_server.py", "line": 1258, "ctx": "'AWS_ACCESS_KEY_ID', 'AKIAIO\u2026REDACTED'"}
+{"repo": "awslabs/mcp", "file": "src/aws-location-mcp-server/tests/test_server.py", "line": 1274, "ctx": "assert kwargs['aws_access_key_id'] == 'AKIAIO\u2026REDACTED'"}
+{"repo": "awslabs/mcp", "file": "src/aws-location-mcp-server/tests/test_server.py", "line": 1286, "ctx": "'AWS_ACCESS_KEY_ID', 'AKIAIO\u2026REDACTED'"}
+{"repo": "awslabs/mcp", "file": "src/aws-location-mcp-server/tests/test_server.py", "line": 1302, "ctx": "assert kwargs['aws_access_key_id'] == 'AKIAIO\u2026REDACTED'"}
+{"repo": "awslabs/mcp", "file": "src/dynamodb-mcp-server/tests/test_model_validation_utils.py", "line": 1512, "ctx": "aws_access_key_id='AKIAIO\u2026REDACTED',  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/dynamodb-mcp-server/awslabs/dynamodb_mcp_server/model_validation_utils.py", "line": 70, "ctx": "DUMMY_ACCESS_KEY = 'AKIAIO\u2026REDACTED'  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/ecs-mcp-server/tests/unit/test_security_integration.py", "line": 35, "ctx": "\"aws_key\": \"AKIAIO\u2026REDACTED\","}
+{"repo": "awslabs/mcp", "file": "src/ecs-mcp-server/tests/unit/test_security_integration.py", "line": 53, "ctx": "assert \"AKIAIO\u2026REDACTED\" not in json.dumps(result)"}
+{"repo": "awslabs/mcp", "file": "src/ecs-mcp-server/tests/unit/test_security_integration.py", "line": 84, "ctx": "\"aws_key\": \"AKIAIO\u2026REDACTED\","}
+{"repo": "awslabs/mcp", "file": "src/ecs-mcp-server/tests/unit/test_security_integration.py", "line": 108, "ctx": "assert \"AKIAIO\u2026REDACTED\" not in result_json"}
+{"repo": "awslabs/mcp", "file": "src/ecs-mcp-server/tests/unit/utils/test_response_sanitization.py", "line": 14, "ctx": "text = \"My access key is AKIAIO\u2026REDACTED\""}
+{"repo": "awslabs/mcp", "file": "src/ecs-mcp-server/tests/unit/utils/test_response_sanitization.py", "line": 16, "ctx": "assert \"AKIAIO\u2026REDACTED\" not in sanitized"}
+{"repo": "awslabs/mcp", "file": "src/ecs-mcp-server/tests/unit/utils/test_response_sanitization.py", "line": 42, "ctx": "\"access_key\": \"AKIAIO\u2026REDACTED\","}
+{"repo": "awslabs/mcp", "file": "src/ecs-mcp-server/tests/unit/utils/test_response_sanitization.py", "line": 54, "ctx": "assert \"AKIAIO\u2026REDACTED\" not in str(sanitized)"}
+{"repo": "awslabs/mcp", "file": "src/ecs-mcp-server/tests/unit/utils/test_response_sanitization.py", "line": 68, "ctx": "\"AKIAIO\u2026REDACTED\","}
+{"repo": "awslabs/mcp", "file": "src/ecs-mcp-server/tests/unit/utils/test_response_sanitization.py", "line": 76, "ctx": "assert \"AKIAIO\u2026REDACTED\" not in str(sanitized)"}
+{"repo": "awslabs/mcp", "file": "src/finch-mcp-server/tests/test_server.py", "line": 37, "ctx": "'message': 'AWS Access Key: AKIAIO\u2026REDACTED is sensitive'  # pragma: allowlist secret"}
+{"repo": "awslabs/mcp", "file": "src/finch-mcp-server/tests/test_server.py", "line": 43, "ctx": "assert 'AKIAIO\u2026REDACTED' not in record['message']  # pragma: allowlist secret"}
+{"repo": "oomol-lab/open-connector", "file": "src/core/aws-sigv4.test.ts", "line": 19, "ctx": "accessKeyId: \"AKIAIO\u2026REDACTED\","}
+{"repo": "oomol-lab/open-connector", "file": "src/core/aws-sigv4.test.ts", "line": 31, "ctx": "\"https://examplebucket.s3.amazonaws.com/test.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIO\u2026REDACTED%2F20130524%2Fus-east-1%2Fs3%2Faws4_request&X-"}
+{"repo": "oomol-lab/open-connector", "file": "src/core/aws-sigv4.test.ts", "line": 39, "ctx": "accessKeyId: \"AKIAIO\u2026REDACTED\","}
+{"repo": "oomol-lab/open-connector", "file": "src/core/aws-sigv4.test.ts", "line": 51, "ctx": "expect(parsed.searchParams.get(\"X-Amz-Credential\")).toBe(\"AKIAIO\u2026REDACTED/20130524/us-east-1/s3/aws4_request\");"}
+{"repo": "oomol-lab/open-connector", "file": "src/core/aws-sigv4.test.ts", "line": 59, "ctx": "accessKeyId: \"AKIAIO\u2026REDACTED\","}
+{"repo": "oomol-lab/open-connector", "file": "src/core/aws-sigv4.test.ts", "line": 92, "ctx": "accessKeyId: \"AKIAIO\u2026REDACTED\","}
+{"repo": "oomol-lab/open-connector", "file": "src/core/aws-sigv4.test.ts", "line": 173, "ctx": "accessKeyId: \"AKIAIO\u2026REDACTED\","}
+{"repo": "oomol-lab/open-connector", "file": "src/core/aws-sigv4.test.ts", "line": 194, "ctx": "\"AWS4-HMAC-SHA256 Credential=AKIAIO\u2026REDACTED/20130524/us-east-1/s3/aws4_request, SignedHeaders=host;range;x-amz-content-sha256;x-amz-date, Signature=f0e8bdb87c9"}
+{"repo": "oomol-lab/open-connector", "file": "src/core/aws-sigv4.test.ts", "line": 220, "ctx": "\"AWS4-HMAC-SHA256 Credential=AKIAIO\u2026REDACTED/20130524/us-east-1/s3/aws4_request, SignedHeaders=date;host;x-amz-content-sha256;x-amz-date;x-amz-storage-class, Si"}
+{"repo": "oomol-lab/open-connector", "file": "src/core/aws-sigv4.test.ts", "line": 244, "ctx": "\"AWS4-HMAC-SHA256 Credential=AKIAIO\u2026REDACTED/20130524/us-east-1/sts/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date;x-amz-security-token, Signa"}
+{"repo": "Klavis-AI/klavis", "file": "mcp_servers/github_official/pkg/http/middleware/token_test.go", "line": 42, "ctx": "authHeader:         \"Bearer ghp_xx\u2026REDACTED\","}
+{"repo": "Klavis-AI/klavis", "file": "mcp_servers/github_official/pkg/http/middleware/token_test.go", "line": 45, "ctx": "expectedToken:      \"ghp_xx\u2026REDACTED\","}
+{"repo": "Klavis-AI/klavis", "file": "mcp_servers/github_official/pkg/http/middleware/token_test.go", "line": 50, "ctx": "authHeader:         \"bearer ghp_xx\u2026REDACTED\","}
+{"repo": "Klavis-AI/klavis", "file": "mcp_servers/github_official/pkg/http/middleware/token_test.go", "line": 53, "ctx": "expectedToken:      \"ghp_xx\u2026REDACTED\","}
+{"repo": "Klavis-AI/klavis", "file": "mcp_servers/github_official/pkg/http/middleware/token_test.go", "line": 58, "ctx": "authHeader:         \"ghp_xx\u2026REDACTED\","}
+{"repo": "Klavis-AI/klavis", "file": "mcp_servers/github_official/pkg/http/middleware/token_test.go", "line": 61, "ctx": "expectedToken:      \"ghp_xx\u2026REDACTED\","}
+{"repo": "Klavis-AI/klavis", "file": "mcp_servers/github_official/pkg/http/middleware/token_test.go", "line": 224, "ctx": "req.Header.Set(headers.AuthorizationHeader, \"Bearer ghp_xx\u2026REDACTED\")"}
+{"repo": "Klavis-AI/klavis", "file": "mcp_servers/github_official/pkg/http/middleware/pat_scope_test.go", "line": 69, "ctx": "Token:     \"ghp_xx\u2026REDACTED\","}
+{"repo": "Klavis-AI/klavis", "file": "mcp_servers/github_official/pkg/http/middleware/pat_scope_test.go", "line": 80, "ctx": "Token:     \"ghp_xx\u2026REDACTED\","}
+{"repo": "Klavis-AI/klavis", "file": "mcp_servers/github_official/pkg/http/middleware/pat_scope_test.go", "line": 91, "ctx": "Token:     \"ghp_xx\u2026REDACTED\","}
+{"repo": "Klavis-AI/klavis", "file": "mcp_servers/github_official/pkg/http/middleware/pat_scope_test.go", "line": 168, "ctx": "Token:     \"ghp_xx\u2026REDACTED\","}
+{"repo": "clidey/whodb", "file": "core/src/aws/profiles_test.go", "line": 31, "ctx": "aws_access_key_id = AKIAIO\u2026REDACTED"}
+{"repo": "clidey/whodb", "file": "core/src/aws/profiles_test.go", "line": 35, "ctx": "aws_access_key_id = AKIAI4\u2026REDACTED"}
+{"repo": "clidey/whodb", "file": "core/src/aws/profiles_test.go", "line": 131, "ctx": "aws_access_key_id = AKIAIO\u2026REDACTED"}
+{"repo": "beenuar/AiSOC", "file": "tests/test_support_bundle.py", "line": 39, "ctx": "(\"sk-abc\u2026REDACTED\", \"api key\"),"}
+{"repo": "beenuar/AiSOC", "file": "tests/test_support_bundle.py", "line": 40, "ctx": "(\"AKIAIO\u2026REDACTED\", \"aws key\"),"}
+{"repo": "beenuar/AiSOC", "file": "tests/test_support_bundle.py", "line": 41, "ctx": "(\"ghp_ab\u2026REDACTED\", \"github token\"),"}
+{"repo": "beenuar/AiSOC", "file": "tests/test_support_bundle.py", "line": 42, "ctx": "(\"xoxb-1\u2026REDACTED\", \"slack token\"),"}
+{"repo": "beenuar/AiSOC", "file": "tests/test_backup_crypt.py", "line": 64, "ctx": "marker = b\"AKIAIO\u2026REDACTED super-secret-connector-credential\""}
+{"repo": "beenuar/AiSOC", "file": "scripts/detection_specs_part2.py", "line": 1085, "ctx": "\"positive\": {\"request_body\": \"{\\\"key\\\":\\\"AKIAIO\u2026REDACTED\\\"}\", \"host\": \"internal.corp.com\"},"}
+{"repo": "beenuar/AiSOC", "file": "scripts/detection_specs_part2.py", "line": 1150, "ctx": "\"positive\": {\"log_line\": \"AWS_ACCESS_KEY=AKIAIO\u2026REDACTED\", \"job\": \"deploy-prod\", \"actor\": \"bot@corp.com\"},"}
+{"repo": "beenuar/AiSOC", "file": "scripts/detection_specs_part2.py", "line": 1481, "ctx": "\"positive\": {\"action\": \"git.push\", \"diff_text\": \"+ secret = \\\"AKIAIO\u2026REDACTED\\\"\", \"ref\": \"refs/heads/main\", \"actor\": \"user@corp.com\"},"}
+{"repo": "beenuar/AiSOC", "file": "services/ingest/internal/activity/session_test.go", "line": 284, "ctx": "\"userIdentity\":     map[string]any{\"arn\": \"arn:aws:iam::1:user/alice\", \"accessKeyId\": \"AKIA00\u2026REDACTED\"},"}
+{"repo": "beenuar/AiSOC", "file": "services/ingest/internal/graph/session_test.go", "line": 97, "ctx": "\"key\":      \"AKIAPA\u2026REDACTED\","}
+{"repo": "beenuar/AiSOC", "file": "services/ingest/internal/graph/session_test.go", "line": 118, "ctx": "if edges[0].FromKey != \"aws_cloudtrail|AKIAPA\u2026REDACTED\" {"}
+{"repo": "beenuar/AiSOC", "file": "services/agents/tests/test_privacy_redactor.py", "line": 15, "ctx": "\"then beaconed to evil-c2.example (8.8.8.8) using key AKIAIO\u2026REDACTED.\""}
+{"repo": "beenuar/AiSOC", "file": "services/agents/tests/test_privacy_redactor.py", "line": 25, "ctx": "\"AKIAIO\u2026REDACTED\","}
+{"repo": "beenuar/AiSOC", "file": "services/api/tests/test_llm_safety.py", "line": 110, "ctx": "messages=[{\"role\": \"user\", \"content\": 'the config had api_key: \"AKIAIO\u2026REDACTED1\"'}],"}
+{"repo": "beenuar/AiSOC", "file": "services/api/tests/test_credential_vault_envelope.py", "line": 48, "ctx": "assert \"AKIAIO\u2026REDACTED\" not in vault.encrypt(\"AKIAIO\u2026REDACTED\")"}
+{"repo": "beenuar/AiSOC", "file": "services/api/tests/test_credential_vault_envelope.py", "line": 48, "ctx": "assert \"AKIAIO\u2026REDACTED\" not in vault.encrypt(\"AKIAIO\u2026REDACTED\")"}
+{"repo": "beenuar/AiSOC", "file": "services/slack-bot/tests/test_war_room.py", "line": 151, "ctx": "secret = \"xoxb-t\u2026REDACTED\""}
+{"repo": "beenuar/AiSOC", "file": "services/fusion/tests/test_sessions.py", "line": 162, "ctx": "\"key\": \"AKIAPA\u2026REDACTED\","}
+{"repo": "beenuar/AiSOC", "file": "services/connectors/tests/test_saas_connectors.py", "line": 37, "ctx": "_TOKEN = \"ghp_fa\u2026REDACTED\""}
+{"repo": "beenuar/AiSOC", "file": "packages/aisoc-ai-sdk/tests/test_ai_sdk.py", "line": 68, "ctx": "result = redact(\"key AKIAIO\u2026REDACTED and sk-abcdefghijklmnopqrstuv\", CaptureMode.MASKED)"}
+{"repo": "beenuar/AiSOC", "file": "packages/aisoc-ai-sdk/tests/test_ai_sdk.py", "line": 68, "ctx": "result = redact(\"key AKIAIOSFODNN7EXAMPLE and sk-abc\u2026REDACTED\", CaptureMode.MASKED)"}
+{"repo": "beenuar/AiSOC", "file": "packages/aisoc-ai-sdk/tests/test_ai_sdk.py", "line": 69, "ctx": "assert \"AKIAIO\u2026REDACTED\" not in (result.content or \"\")"}
+{"repo": "beenuar/AiSOC", "file": "packages/aisoc-ai-sdk/tests/test_ai_sdk.py", "line": 70, "ctx": "assert \"sk-abc\u2026REDACTED\" not in (result.content or \"\")"}
+{"repo": "beenuar/AiSOC", "file": "packages/aisoc-ai-sdk/tests/test_ai_sdk.py", "line": 76, "ctx": "text = \"AKIAIO\u2026REDACTED\""}
+{"repo": "beenuar/AiSOC", "file": "packages/aisoc-ai-sdk/tests/test_ai_sdk.py", "line": 115, "ctx": "c.model_call(\"gpt-4o\", prompt=\"token AKIAIO\u2026REDACTED\")"}
+{"repo": "skyhook-io/radar", "file": "pkg/ai/context/minify_test.go", "line": 293, "ctx": "{Name: \"API_KEY\", Value: \"sk-abc\u2026REDACTED\"},"}
+{"repo": "skyhook-io/radar", "file": "pkg/ai/context/minify_test.go", "line": 333, "ctx": "{Name: \"API_KEY\", Value: \"sk-abc\u2026REDACTED\"},"}
+{"repo": "skyhook-io/radar", "file": "pkg/ai/context/redact_auth_test.go", "line": 26, "ctx": "{\"akia-control\", \"key=AKIAAB\u2026REDACTED\", \"key=[REDACTED]\"},"}
+{"repo": "skyhook-io/radar", "file": "pkg/ai/context/logs_test.go", "line": 329, "ctx": "\"ERROR failed to auth with key sk-abc\u2026REDACTED\","}
+{"repo": "skyhook-io/radar", "file": "pkg/ai/context/logs_test.go", "line": 541, "ctx": "\"INFO auth key sk-abc\u2026REDACTED\","}
+{"repo": "skyhook-io/radar", "file": "pkg/ai/context/redact_test.go", "line": 9, "ctx": "input := \"Using API key sk-abc\u2026REDACTED for requests\""}
+{"repo": "skyhook-io/radar", "file": "pkg/ai/context/redact_test.go", "line": 20, "ctx": "input := \"token=ghp_AB\u2026REDACTED\""}
+{"repo": "skyhook-io/radar", "file": "pkg/ai/context/redact_test.go", "line": 28, "ctx": "input := \"AWS_ACCESS_KEY_ID=AKIAIO\u2026REDACTED\""}
+{"repo": "skyhook-io/radar", "file": "pkg/ai/context/redact_test.go", "line": 30, "ctx": "if strings.Contains(result, \"AKIAIO\u2026REDACTED\") {"}
+{"repo": "skyhook-io/radar", "file": "pkg/ai/context/redact_test.go", "line": 168, "ctx": "input := \"key1=sk-abc\u2026REDACTED and key2=AKIAIOSFODNN7EXAMPLE\""}
+{"repo": "skyhook-io/radar", "file": "pkg/ai/context/redact_test.go", "line": 168, "ctx": "input := \"key1=sk-abc123def456ghi789jkl012mno and key2=AKIAIO\u2026REDACTED\""}
+{"repo": "skyhook-io/radar", "file": "pkg/ai/context/redact_test.go", "line": 213, "ctx": "\"address\": \"https://auth.example.com?t=ghp_01\u2026REDACTED\","}
+{"repo": "skyhook-io/radar", "file": "internal/server/trivy_reports_access_test.go", "line": 27, "ctx": "const leakedMatch = \"AWS_ACCESS_KEY_ID=AKIAFA\u2026REDACTED\""}
+{"repo": "skyhook-io/radar", "file": "internal/mcp/tools_diagnose_crash_cause_test.go", "line": 71, "ctx": "secret := \"sk-abc\u2026REDACTED\""}
+{"repo": "skyhook-io/radar", "file": "internal/helm/manifest_redaction_test.go", "line": 49, "ctx": "note: \"token ghp_AB\u2026REDACTED\"`"}
+{"repo": "skyhook-io/radar", "file": "internal/helm/manifest_redaction_test.go", "line": 53, "ctx": "\"old-api-key-value\", \"new-api-key-value\", \"ghp_AB\u2026REDACTED\","}
+{"repo": "punkpeye/fastmcp", "file": "src/openapi/__fixtures__/ensureBenchmarkSpecs.mjs", "line": 64, "ctx": "\"xoxb-E\u2026REDACTED\","}
+{"repo": "snyk/agent-scan", "file": "src/agent_scan/redact.py", "line": 414, "ctx": "a positional ``AKIAIO\u2026REDACTED`` or even a flag-shaped token"}
+{"repo": "snyk/agent-scan", "file": "src/agent_scan/redact.py", "line": 415, "ctx": "``--AKIAIO\u2026REDACTED`` with no ``=``) is replaced wholesale by"}
+{"repo": "snyk/agent-scan", "file": "tests/unit/test_verify_api.py", "line": 1677, "ctx": "secret = \"ghp_ab\u2026REDACTED\""}
+{"repo": "snyk/agent-scan", "file": "tests/unit/test_verify_api.py", "line": 1726, "ctx": "secret = \"ghp_ab\u2026REDACTED\""}
+{"repo": "snyk/agent-scan", "file": "tests/unit/test_redact_prefilter_equivalence.py", "line": 20, "ctx": "\"AKIAIO\u2026REDACTED\",  # AWS"}
+{"repo": "snyk/agent-scan", "file": "tests/unit/test_redact_prefilter_equivalence.py", "line": 23, "ctx": "\"xoxb-1\u2026REDACTED\" + \"abcdefghijklmnopqrstuvwx\",  # Slack"}
+{"repo": "snyk/agent-scan", "file": "tests/unit/test_redact.py", "line": 308, "ctx": "aws_token = \"AKIAIO\u2026REDACTED\""}
+{"repo": "snyk/agent-scan", "file": "tests/unit/test_redact.py", "line": 386, "ctx": "args = [\"--api-key\", \"AKIAIO\u2026REDACTED\"]"}
+{"repo": "snyk/agent-scan", "file": "tests/unit/test_redact.py", "line": 613, "ctx": "text = \"Authenticate with AKIAIO\u2026REDACTED before running.\""}
+{"repo": "snyk/agent-scan", "file": "tests/unit/test_redact.py", "line": 615, "ctx": "assert \"AKIAIO\u2026REDACTED\" not in result"}
+{"repo": "rusq/slackdump", "file": "internal/fixtures/fixtures.go", "line": 31, "ctx": "TestBotToken      = \"xoxb-1\u2026REDACTED\""}
+{"repo": "rusq/slackdump", "file": "internal/fixtures/fixtures.go", "line": 34, "ctx": "TestPersonalToken = \"xoxp-7\u2026REDACTED\""}
+{"repo": "rusq/slackdump", "file": "internal/fixtures/fixtures.go", "line": 35, "ctx": "TestOauthToken    = \"xoxp-7\u2026REDACTED\""}
+{"repo": "rusq/slackdump", "file": "cmd/slackdump/internal/export/v3_test.go", "line": 50, "ctx": "// \t\tFakeToken:      \"xoxp-1\u2026REDACTED\","}
+{"repo": "stacklok/toolhive", "file": "pkg/auth/awssts/signer_test.go", "line": 61, "ctx": "AccessKeyID:     \"AKIAIO\u2026REDACTED\","}
+{"repo": "A9T9/RPA", "file": "extension/lib/tesseract/core/tesseract-core-simd-lstm.wasm.js", "line": 14, "ctx": "function Ia(){Ea--;b.monitorRunDependencies&&b.monitorRunDependencies(Ea);if(0==Ea&&(null!==Fa&&(clearInterval(Fa),Fa=null),Ga)){var a=Ga;Ga=null;a()}}function "}
+{"repo": "A9T9/RPA", "file": "extension/lib/tesseract/core/tesseract-core-simd-lstm.wasm.js", "line": 14, "ctx": "function Ia(){Ea--;b.monitorRunDependencies&&b.monitorRunDependencies(Ea);if(0==Ea&&(null!==Fa&&(clearInterval(Fa),Fa=null),Ga)){var a=Ga;Ga=null;a()}}function "}
+{"repo": "A9T9/RPA", "file": "extension/lib/tesseract/core/tesseract-core-simd-lstm.wasm.js", "line": 14, "ctx": "function Ia(){Ea--;b.monitorRunDependencies&&b.monitorRunDependencies(Ea);if(0==Ea&&(null!==Fa&&(clearInterval(Fa),Fa=null),Ga)){var a=Ga;Ga=null;a()}}function "}
+{"repo": "A9T9/RPA", "file": "extension/lib/tesseract/core/tesseract-core-simd-lstm.wasm.js", "line": 14, "ctx": "function Ia(){Ea--;b.monitorRunDependencies&&b.monitorRunDependencies(Ea);if(0==Ea&&(null!==Fa&&(clearInterval(Fa),Fa=null),Ga)){var a=Ga;Ga=null;a()}}function "}
+{"repo": "uber/ADR", "file": "Detection/context_providers/source_codes/mcp_servers_2/jira_server/environment/config.py", "line": 4, "ctx": "API_KEY = \"sk-123\u2026REDACTED\""}
+{"repo": "zzet/gortex", "file": "internal/astquery/detectors_test.go", "line": 202, "ctx": "apiKey := \"AKIA01\u2026REDACTED\""}
+{"repo": "zzet/gortex", "file": "internal/astquery/detectors_test.go", "line": 215, "ctx": "api_key = \"AKIA01\u2026REDACTED\""}
+{"repo": "zzet/gortex", "file": "internal/mcp/read_security_test.go", "line": 89, "ctx": "const secretVal = \"ghp_01\u2026REDACTED\""}
+{"repo": "zzet/gortex", "file": "internal/mcp/tools_review_post_test.go", "line": 60, "ctx": "const secret = \"AKIA01\u2026REDACTED\""}
+{"repo": "zzet/gortex", "file": "internal/mcp/localization_source_window_test.go", "line": 140, "ctx": "\"  token := \\\"ghp_12\u2026REDACTED\\\"\\n\" +"}
+{"repo": "zzet/gortex", "file": "internal/mcp/localization_source_window_test.go", "line": 150, "ctx": "require.NotContains(t, window.Content, \"ghp_12\u2026REDACTED\")"}
+{"repo": "zzet/gortex", "file": "internal/mcp/localization_source_window_test.go", "line": 156, "ctx": "const secret = \"ghp_12\u2026REDACTED\""}
+{"repo": "zzet/gortex", "file": "internal/mcp/redact_golden_test.go", "line": 36, "ctx": "const secret = \"AKIAIO\u2026REDACTED\" // value-shape AWS access-key id"}
+{"repo": "zzet/gortex", "file": "internal/mcp/redact_readsink_test.go", "line": 11, "ctx": "const secret = \"token: ghp_01\u2026REDACTED\\n\""}
+{"repo": "zzet/gortex", "file": "internal/mcp/redact_readsink_test.go", "line": 18, "ctx": "if strings.Contains(out, \"ghp_01\u2026REDACTED\") {"}
+{"repo": "zzet/gortex", "file": "internal/mcp/redact_readsink_test.go", "line": 31, "ctx": "const code = \"apiKey := \\\"ghp_01\u2026REDACTED\\\"\\n\""}
+{"repo": "zzet/gortex", "file": "internal/mcp/redact_readsink_test.go", "line": 42, "ctx": "const src = \"stripe_key: sk-012\u2026REDACTED\\n\""}
+{"repo": "zzet/gortex", "file": "internal/mcp/redact_readsink_test.go", "line": 47, "ctx": "if strings.Contains(out, \"sk-012\u2026REDACTED\") {"}
+{"repo": "zzet/gortex", "file": "internal/mcp/redact_readsink_test.go", "line": 63, "ctx": "const src = \"db:\\n  access_key: AKIAIO\u2026REDACTED\\n\""}
+{"repo": "zzet/gortex", "file": "internal/mcp/redact_readsink_test.go", "line": 68, "ctx": "if strings.Contains(out, \"AKIAIO\u2026REDACTED\") {"}
+{"repo": "zzet/gortex", "file": "internal/review/post_test.go", "line": 80, "ctx": "const secret = \"AKIA01\u2026REDACTED\""}
+{"repo": "zzet/gortex", "file": "internal/review/post_test.go", "line": 127, "ctx": "const secret = \"ghp_AB\u2026REDACTED\""}
+{"repo": "zzet/gortex", "file": "internal/review/redact_readsink_test.go", "line": 37, "ctx": "secret := \"github_token: ghp_01\u2026REDACTED\\n\""}
+{"repo": "zzet/gortex", "file": "internal/review/redact_readsink_test.go", "line": 42, "ctx": "if strings.Contains(out, \"ghp_01\u2026REDACTED\") {"}
+{"repo": "zzet/gortex", "file": "internal/review/redact_test.go", "line": 16, "ctx": "secret: \"AKIA01\u2026REDACTED\","}
+{"repo": "zzet/gortex", "file": "internal/review/redact_test.go", "line": 17, "ctx": "body:   \"This line leaks a credential: AKIA01\u2026REDACTED \u2014 move it to an env var.\","}
+{"repo": "zzet/gortex", "file": "internal/review/redact_test.go", "line": 26, "ctx": "secret: \"ghp_AB\u2026REDACTED\","}
+{"repo": "zzet/gortex", "file": "internal/review/redact_test.go", "line": 27, "ctx": "body:   \"token leaked in the diff: ghp_AB\u2026REDACTED\","}
+{"repo": "zzet/gortex", "file": "internal/review/redact_test.go", "line": 95, "ctx": "clean, hits := RedactSecrets(`api_key = \"AKIA01\u2026REDACTED\"`)"}
+{"repo": "zzet/gortex", "file": "internal/review/redact_test.go", "line": 99, "ctx": "if strings.Contains(clean, \"AKIA01\u2026REDACTED\") {"}
+{"repo": "mxsm/rocketmq-rust", "file": "rocketmq-ai/rocketmq-sre/scripts/tests/test_check_provider_failover_qualification.py", "line": 225, "ctx": "report[\"credential\"] = \"sk-abc\u2026REDACTED\""}
+{"repo": "mxsm/rocketmq-rust", "file": "rocketmq-client/src/admin/mq_admin_read_ext.rs", "line": 1126, "ctx": "\"AKIAIO\u2026REDACTED\","}

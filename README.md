@@ -23,6 +23,21 @@ AI agent do on your machine, and what hygiene protects you.
   example key, placeholders (`ghp_xxx`, `sk-1234…`) or minified binary. The regex's false-positive rate on this sample was 100%:
   naive secret scanning is close to useless without context.
 
+## Validation (hand-labeling, n = 20 stratified repos)
+Two independent reviewers judged every regex hit in production code as a real capability or false positive.
+| Signal | Flagged | Truly capable | Precision | Recall |
+|---|---|---|---|---|
+| shell_exec | 12 | 9 | 0.75 | 1.00 |
+| fs_write | 13 | 10 | 0.77 | 1.00 |
+| outbound_http | 16 | 14 | 0.81 | 0.93 |
+| eval_dynamic | 3 | 1 | 0.33 | 1.00 |
+| sql_raw | 1 | 1 | 1.00 | 1.00 |
+False positives were overwhelmingly build scripts, test tooling, bundled frontend code and comments;
+eval_dynamic is too noisy to publish without a tightened pattern. Reviewers also caught 2 regex misses
+(an HTTP tool and raw-SQL connectors with 0 hits), so real capability levels are slightly higher than
+the scanner reports.
+
 ## Caveats
 Static pattern matching only; nothing executed. "Can run shell" ≠ vulnerable. Not a security audit
-of any project. The next step is hand-labeling about 20 servers to measure precision for each signal.
+of any project. Capability percentages are pre-validation scanner output; applying measured precision
+would put real rates at roughly: shell ~49%, fs_write ~59%, HTTP ~68%.

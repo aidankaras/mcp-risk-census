@@ -1,0 +1,37 @@
+{
+ "shell_exec": {
+  "flagged": 12,
+  "truly_capable": 9,
+  "true_pos": 9,
+  "precision": 0.75,
+  "recall": 1.0
+ },
+ "fs_write": {
+  "flagged": 13,
+  "truly_capable": 10,
+  "true_pos": 10,
+  "precision": 0.77,
+  "recall": 1.0
+ },
+ "outbound_http": {
+  "flagged": 16,
+  "truly_capable": 14,
+  "true_pos": 13,
+  "precision": 0.81,
+  "recall": 0.93
+ },
+ "eval_dynamic": {
+  "flagged": 3,
+  "truly_capable": 1,
+  "true_pos": 1,
+  "precision": 0.33,
+  "recall": 1.0
+ },
+ "sql_raw": {
+  "flagged": 1,
+  "truly_capable": 1,
+  "true_pos": 1,
+  "precision": 1.0,
+  "recall": 1.0
+ }
+}

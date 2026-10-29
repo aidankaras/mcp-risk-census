@@ -1,7 +1,7 @@
 # MCP Risk Census
 
 A static census of **109 public Model Context Protocol (MCP) servers** on GitHub: what they let an
-AI agent do on your machine, and what hygiene protects you. Includes a hand-labeling validation of
+AI agent do on your machine, and what hygiene protects you. Includes a labeled validation of
 the scanner itself — because a census you haven't validated is just pattern matching.
 
 Built by Aidan Karas — Data Science & Mathematics undergraduate, Boston University.
@@ -37,7 +37,9 @@ Built by Aidan Karas — Data Science & Mathematics undergraduate, Boston Univer
    Hygiene = SECURITY.md + path guard + input schema + auth signal, −1 for a hardcoded key (−1–4).
 4. **Key check** (`keycheck.py`): every hardcoded-key hit manually reviewed with secrets redacted.
 5. **Validate** (`dump_sample.py` + `data/hand_labels.json`): 20 repos sampled stratified by stars;
-   every capability hit judged in context as real capability vs false positive.
+   every capability hit was shown with its code context and judged as real capability vs false
+   positive by two LLM reviewers (Claude Sonnet, 10 repos each). These are model labels, not
+   human labels; a human spot-check is the obvious next step.
 
 Per-repo data is in `data/servers.jsonl` (public repos; factual signal counts; see caveats).
 
@@ -59,7 +61,8 @@ capability levels sit slightly *above* the scanner's numbers.
 ## Reproduce
 
 ```bash
-python3 -m pip install matplotlib   # only needed for charts.py
+python3 -m pip install -r requirements.txt   # matplotlib, only needed for charts.py
+# collect.py needs the GitHub CLI (`gh`, authenticated); set GH_BIN if it is not on PATH
 python3 collect.py && python3 scan.py && python3 analyze.py && python3 charts.py
 ```
 
@@ -74,7 +77,7 @@ python3 collect.py && python3 scan.py && python3 analyze.py && python3 charts.py
   dangerous capability is their advertised purpose (e.g. security/automation tooling).
 - n = 109 of a much larger ecosystem, top-of-search by stars; results describe that sample.
 
-## Skills demonstrated
+## Tests
 
-Data collection at API rate limits, reproducible pipelines, static analysis design, heuristic
-scoring, hand-labeling validation (precision/recall), statistical reporting with honest error bars.
+`python3 -m pytest` checks the signal regexes against known positive and negative snippets.
+CI runs them on every push.

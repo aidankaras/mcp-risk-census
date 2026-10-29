@@ -1,15 +1,15 @@
 """Step 2: static first-pass scan of each repo (shallow clone, regex signals, delete clone).
 
-Signals are DRAFT heuristics, not verdicts -- the rubric (RUBRIC.md) is Aidan's to finalize.
+Signals are heuristics, not verdicts; see RUBRIC.md and the validation section of the README.
 Appends to data/scan.jsonl; resumable (skips repos already scanned).
-Light on purpose: VPS has 1 vCPU, so clones are depth-1, blob-filtered, one at a time.
+Light on purpose: clones are depth-1, blob-filtered, one at a time.
 """
-import json, re, subprocess, pathlib, shutil, sys
+import json, os, re, subprocess, pathlib, shutil, sys, tempfile
 
 ROOT = pathlib.Path(__file__).parent
 REPOS = ROOT / "data" / "repos.jsonl"
 OUT = ROOT / "data" / "scan.jsonl"
-TMP = pathlib.Path("/opt/data/cache/scratch/mcp-census-clones")
+TMP = pathlib.Path(os.environ.get("MCP_CENSUS_TMP", tempfile.gettempdir())) / "mcp-census-clones"
 CODE_EXT = {".py", ".ts", ".js", ".mjs", ".go", ".rs", ".java", ".cs", ".rb"}
 SKIP_DIRS = {"node_modules", ".git", "dist", "build", "vendor", "test", "tests", "__tests__", "examples", "docs"}
 

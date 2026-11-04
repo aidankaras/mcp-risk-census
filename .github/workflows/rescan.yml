@@ -1,0 +1,44 @@
+name: Monthly rescan
+# Re-scans the same candidate repos with the frozen rubric and proposes a dated
+# snapshot as a pull request. The published headline numbers are never overwritten;
+# each snapshot sits next to them so drift over time is visible.
+on:
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  rescan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Scan into a scratch copy
+        run: |
+          mkdir -p /tmp/run/data
+          cp *.py /tmp/run/ && cp data/repos.jsonl /tmp/run/data/
+          cd /tmp/run && python scan.py && python analyze.py > /dev/null
+      - name: Write dated snapshot
+        run: |
+          d=$(date -u +%Y-%m)
+          mkdir -p data/snapshots
+          cp /tmp/run/data/summary.json data/snapshots/$d.json
+          python snapshot_diff.py data/summary.json data/snapshots/$d.json > data/snapshots/$d.md
+      - name: Open pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          d=$(date -u +%Y-%m)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b snapshot/$d
+          git add data/snapshots
+          git diff --cached --quiet && exit 0
+          git commit -m "data: monthly rescan snapshot $d"
+          git push -u origin snapshot/$d
+          gh pr create --title "Monthly rescan: $d" --body-file data/snapshots/$d.md

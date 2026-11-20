@@ -1,5 +1,7 @@
 # MCP Risk Census
 
+[![attested by humans](https://github.com/aidankaras/mcp-risk-census/actions/workflows/git-signoff.yml/badge.svg)](https://github.com/aidankaras/mcp-risk-census/actions/workflows/git-signoff.yml)
+
 A static census of **109 public Model Context Protocol (MCP) servers** on GitHub: what they let an
 AI agent do on your machine, and what hygiene protects you. Includes a labeled validation of
 the scanner itself — because a census you haven't validated is just pattern matching.

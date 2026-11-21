@@ -14,8 +14,9 @@ Built by Aidan Karas — Data Science & Mathematics undergraduate, Boston Univer
   outbound network calls (raw scanner counts; validation-adjusted: ~49% / ~59% / ~68%).
 - **Protections lag capabilities.** 79% validate tool inputs against a schema, but only 37% restrict
   which filesystem paths they can touch and 36% ship a SECURITY.md.
-- **Popularity does not buy hygiene.** Spearman correlation between GitHub stars and hygiene score:
-  −0.14 (mean hygiene 2.44 above vs 2.13 below median stars — a small, likely-noise gap).
+- **No evidence that popularity predicts hygiene.** Spearman correlation between GitHub stars and
+  hygiene score: ρ = 0.13, p = 0.19 (weak, not significant; mean hygiene 2.44 above vs 2.13 below
+  median stars).
 - **Naive secret scanning is useless.** Of 17 repos flagged for hardcoded API keys, **0 contained a
   real leak** — every hit was a test fixture, AWS's documented example key, or a placeholder. 100%
   false-positive rate without context.

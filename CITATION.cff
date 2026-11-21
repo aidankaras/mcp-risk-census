@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
 title: "MCP Risk Census"
-abstract: "Static census of 109 public MCP servers: what agent tool servers can do on the host versus the guardrails they ship, with a validated scanner."
+abstract: "Static census of 109 public GitHub repos classed as MCP servers by a keyword filter: what agent tool servers can do on the host versus the guardrails they ship, with an LLM-labeled spot-check of the scanner."
 type: software
 authors:
   - family-names: Karas
@@ -9,6 +9,6 @@ authors:
     affiliation: Boston University
 repository-code: "https://github.com/aidankaras/mcp-risk-census"
 license: MIT
-version: 1.0.0
-date-released: 2026-11-04
+version: 1.1.0
+date-released: 2026-11-21
 keywords: [mcp, ai-agents, agent-safety, security]

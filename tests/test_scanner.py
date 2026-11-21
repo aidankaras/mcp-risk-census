@@ -41,3 +41,16 @@ def test_scan_dir_and_key_hits_agree(tmp_path):
     assert counts["security_md"] is True
     hits = list(key_hits(tmp_path))
     assert hits == [{"file": "server.py", "line": 3, "ctx": "K = 'AKIABB…REDACTED'"}]
+
+
+def test_security_md_found_in_github_dir(tmp_path):
+    (tmp_path / ".github").mkdir()
+    (tmp_path / ".github" / "SECURITY.md").write_text("x")
+    assert scan_dir(tmp_path)["security_md"] is True
+    (tmp_path / ".github" / "SECURITY.md").unlink()
+    assert scan_dir(tmp_path)["security_md"] is False
+
+
+def test_tsx_files_are_scanned(tmp_path):
+    (tmp_path / "App.tsx").write_text("await fetch(url)\n")
+    assert scan_dir(tmp_path)["outbound_http"] == 1

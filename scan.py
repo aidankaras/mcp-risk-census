@@ -23,7 +23,13 @@ REPOS = ROOT / "data" / "repos.jsonl"
 OUT = ROOT / "data" / "scan.jsonl"
 TMP = pathlib.Path(os.environ.get("MCP_CENSUS_TMP", tempfile.gettempdir())) / "mcp-census-clones"
 CLONE_TIMEOUT = 180
-CODE_EXT = {".py", ".ts", ".js", ".mjs", ".go", ".rs", ".java", ".cs", ".rb"}
+# Rubric v2 (this file). The published baseline in data/scan.jsonl was produced by rubric v1,
+# scan.py at commit 515fada; see RUBRIC.md for the differences.
+RUBRIC_VERSION = 2
+CODE_EXT = {".py", ".ts", ".tsx", ".mts", ".cts", ".js", ".jsx", ".mjs", ".cjs",
+            ".go", ".rs", ".java", ".kt", ".swift", ".cs", ".rb"}
+# GitHub shows a security policy from any of these locations.
+SECURITY_MD_DIRS = ("", ".github", "docs")
 SKIP_DIRS = {"node_modules", ".git", "dist", "build", "vendor", "test", "tests", "__tests__", "examples", "docs"}
 
 # capability signals: what the server can do on the host / network
@@ -36,13 +42,12 @@ SIGNALS = {
 }
 # hygiene signals
 HYGIENE = {
-    "env_secrets": r"(process\.env\.|os\.environ|os\.getenv|Getenv\()",
     "hardcoded_key": r"(sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{30,}|AKIA[0-9A-Z]{16}|xox[bp]-[0-9A-Za-z-]{20,})",
     "auth_mentioned": r"\b(oauth|OAuth|bearer|Authorization|api[_-]?key)\b",
     "path_guard": r"(allowed_?dir|allowedDirectories|realpath|path\.resolve\(.*startsWith|is_relative_to)",
     "input_schema": r"(zod|z\.object|inputSchema|pydantic|BaseModel)",
 }
-TRANSPORT = {"stdio": r"stdio", "http_sse": r"(\bSSE\b|\bsse\b|SSEServerTransport|StreamableHTTP|streamable-http)"}
+TRANSPORT = {"http_sse": r"(\bSSE\b|\bsse\b|SSEServerTransport|StreamableHTTP|streamable-http)"}
 ALL_PATTERNS = {k: re.compile(p) for d in (SIGNALS, HYGIENE, TRANSPORT) for k, p in d.items()}
 
 
@@ -105,7 +110,9 @@ def scan_dir(repo_dir):
         loc += txt.count("\n")
         for name, _, _ in find_matches(txt, ALL_PATTERNS):
             counts[name] += 1
-    has_security_md = any(p.name.upper() == "SECURITY.MD" for p in repo_dir.glob("*"))
+    has_security_md = any(p.name.upper() == "SECURITY.MD"
+                          for d in SECURITY_MD_DIRS if (repo_dir / d).is_dir()
+                          for p in (repo_dir / d).iterdir() if p.is_file())
     return {"code_files": n_files, "loc": loc, "security_md": has_security_md, **counts}
 
 

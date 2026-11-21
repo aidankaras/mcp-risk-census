@@ -5,4 +5,3 @@ testpaths = ["tests"]
 [tool.ruff]
 line-length = 110
 target-version = "py312"
-extend-exclude = [".claude", ".git-signoff"]

@@ -1,6 +1,6 @@
 import re
 
-from scan import HYGIENE, SIGNALS
+from scan import HYGIENE, SIGNALS, TRANSPORT
 
 
 def hits(table, name, text):
@@ -35,3 +35,19 @@ def test_hygiene():
     assert hits(HYGIENE, "path_guard", "if not p.is_relative_to(root):")
     assert hits(HYGIENE, "input_schema", "inputSchema: z.object({})")
     assert not hits(HYGIENE, "path_guard", "x = 1")
+
+
+def test_auth_and_transport():
+    assert hits(HYGIENE, "auth_mentioned", 'headers["Authorization"] = token')
+    assert hits(HYGIENE, "auth_mentioned", "api_key = os.environ['X']")
+    assert not hits(HYGIENE, "auth_mentioned", "author = 'me'")
+    assert hits(TRANSPORT, "http_sse", "new SSEServerTransport('/messages', res)")
+    assert hits(TRANSPORT, "http_sse", "mcp.run(transport='streamable-http')")
+    assert not hits(TRANSPORT, "http_sse", "new StdioServerTransport()")
+
+
+def test_hardcoded_key_shapes():
+    # Built at runtime so this file holds no secret-shaped literals.
+    assert hits(HYGIENE, "hardcoded_key", "k = '" + "ghp_" + "x" * 36 + "'")
+    assert hits(HYGIENE, "hardcoded_key", "k = '" + "AKIA" + "Z" * 16 + "'")
+    assert not hits(HYGIENE, "hardcoded_key", "k = 'sk-short'")

@@ -1,6 +1,5 @@
 # MCP Risk Census
 
-[![attested by humans](https://github.com/aidankaras/mcp-risk-census/actions/workflows/git-signoff.yml/badge.svg)](https://github.com/aidankaras/mcp-risk-census/actions/workflows/git-signoff.yml)
 
 A static census of **109 public GitHub repos that a keyword filter classed as Model Context
 Protocol (MCP) servers**: what they let an AI agent do on your machine, and what hygiene protects

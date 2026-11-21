@@ -4,34 +4,106 @@
   "truly_capable": 9,
   "true_pos": 9,
   "precision": 0.75,
-  "recall": 1.0
+  "precision_ci95": [
+   0.47,
+   0.91
+  ],
+  "recall": 1.0,
+  "recall_ci95": [
+   0.7,
+   1.0
+  ],
+  "flagged_but_no_hit_shown": 0
  },
  "fs_write": {
   "flagged": 13,
   "truly_capable": 10,
   "true_pos": 10,
   "precision": 0.77,
-  "recall": 1.0
+  "precision_ci95": [
+   0.5,
+   0.92
+  ],
+  "recall": 1.0,
+  "recall_ci95": [
+   0.72,
+   1.0
+  ],
+  "flagged_but_no_hit_shown": 0
  },
  "outbound_http": {
   "flagged": 16,
   "truly_capable": 14,
   "true_pos": 13,
   "precision": 0.81,
-  "recall": 0.93
+  "precision_ci95": [
+   0.57,
+   0.93
+  ],
+  "recall": 0.93,
+  "recall_ci95": [
+   0.69,
+   0.99
+  ],
+  "flagged_but_no_hit_shown": 0
  },
  "eval_dynamic": {
   "flagged": 3,
   "truly_capable": 1,
   "true_pos": 1,
   "precision": 0.33,
-  "recall": 1.0
+  "precision_ci95": [
+   0.06,
+   0.79
+  ],
+  "recall": 1.0,
+  "recall_ci95": [
+   0.21,
+   1.0
+  ],
+  "flagged_but_no_hit_shown": 0
  },
  "sql_raw": {
   "flagged": 1,
   "truly_capable": 1,
   "true_pos": 1,
   "precision": 1.0,
-  "recall": 1.0
+  "precision_ci95": [
+   0.21,
+   1.0
+  ],
+  "recall": 1.0,
+  "recall_ci95": [
+   0.21,
+   1.0
+  ],
+  "flagged_but_no_hit_shown": 1
+ },
+ "adjusted_rates": {
+  "method": "census rate x precision / recall; 95% interval from a bootstrap over the 20 labeled repos",
+  "shell_exec": {
+   "raw_pct": 65,
+   "adjusted_pct": 49,
+   "adjusted_ci95_pct": [
+    33,
+    65
+   ]
+  },
+  "fs_write": {
+   "raw_pct": 77,
+   "adjusted_pct": 59,
+   "adjusted_ci95_pct": [
+    39,
+    77
+   ]
+  },
+  "outbound_http": {
+   "raw_pct": 84,
+   "adjusted_pct": 74,
+   "adjusted_ci95_pct": [
+    55,
+    96
+   ]
+  }
  }
 }

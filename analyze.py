@@ -43,7 +43,7 @@ def is_server(s, repos):
 
 def score(s, repos):
     risk = sum(w for k, w in RISK_W.items() if s[k])                      # 0..11
-    hyg = sum(1 for k in HYGIENE_SIGNALS if s[k]) - (1 if s["hardcoded_key"] else 0)  # -1..4
+    hyg = sum(1 for k in HYGIENE_SIGNALS if s[k])                         # 0..4
     return {**s, "stars": repos[s["full_name"]]["stars"], "risk": risk, "hygiene": hyg,
             "remote": bool(s["http_sse"])}
 
@@ -80,10 +80,21 @@ def summarize(rows):
     }
 
 
+def load_likely_non_servers(path=ROOT / "data/likely_non_servers.json"):
+    with open(path) as f:
+        return set(json.load(f)["repos"])
+
+
 def main():
     repos = load_repos()
     rows = [score(s, repos) for s in load_scan() if is_server(s, repos)]
     summary = summarize(rows)
+    # Sensitivity check: the keyword filter keeps some repos that are not servers.
+    non_servers = load_likely_non_servers()
+    sub = summarize([r for r in rows if r["full_name"] not in non_servers])
+    summary["excluding_likely_non_servers"] = {
+        k: sub[k] for k in ("n_servers", "pct", "spearman_stars_hygiene", "spearman_stars_hygiene_p",
+                            "remote_without_auth_signal", "remote_total")}
     (ROOT / "data/servers.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
     (ROOT / "data/summary.json").write_text(json.dumps(summary, indent=2))
     print(json.dumps(summary, indent=2))

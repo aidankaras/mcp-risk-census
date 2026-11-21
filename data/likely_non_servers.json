@@ -1,0 +1,18 @@
+{
+  "note": "Repos kept by the keyword filter in analyze.py whose own GitHub description says they are not an MCP server (a guide, a skill or asset library, a client, a framework, or a proxy/gateway that forwards to other servers). Picked from the descriptions in data/repos.jsonl during review; this is not a full hand-label of all 109 repos, so other non-servers may remain. Used only for the sensitivity check in summary.json.",
+  "repos": {
+    "FlorianBruniaux/claude-code-ultimate-guide": "guide",
+    "figma/mcp-server-guide": "guide",
+    "google-labs-code/stitch-skills": "skill library",
+    "glincker/thesvg": "SVG logo library",
+    "f/mcptools": "client CLI",
+    "OpenAgentPlatform/Dive": "MCP host desktop app (client)",
+    "tadata-org/fastapi_mcp": "framework",
+    "universal-tool-calling-protocol/code-mode": "client-side library",
+    "open-webui/mcpo": "proxy",
+    "supercorp-ai/supergateway": "gateway",
+    "sparfenyuk/mcp-proxy": "proxy",
+    "knowsuchagency/mcp2cli": "client CLI",
+    "metatool-ai/metamcp": "aggregator / gateway"
+  }
+}

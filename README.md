@@ -15,7 +15,7 @@ Built by Aidan Karas — Data Science & Mathematics undergraduate, Boston Univer
 - **Protections lag capabilities.** 79% validate tool inputs against a schema, but only 37% restrict
   which filesystem paths they can touch and 36% ship a SECURITY.md.
 - **No evidence that popularity predicts hygiene.** Spearman correlation between GitHub stars and
-  hygiene score: ρ = 0.13, p = 0.19 (weak, not significant; mean hygiene 2.44 above vs 2.13 below
+  hygiene score: ρ = 0.13, p = 0.19 (weak, not significant; mean hygiene 2.45 above vs 2.13 below
   median stars).
 - **Naive secret scanning is useless.** Of 17 repos flagged for hardcoded API keys, **0 contained a
   real leak** — every hit was a test fixture, AWS's documented example key, or a placeholder. 100%
@@ -37,7 +37,7 @@ Built by Aidan Karas — Data Science & Mathematics undergraduate, Boston Univer
 2. **Scan** (`scan.py`): shallow clone → regex counts of capability & hygiene signals → delete clone.
 3. **Filter & score** (`analyze.py`): keep actual servers (n = 109). Signals are binary.
    Risk = shell 3 + eval 3 + fs_write 2 + raw SQL 2 + HTTP 1 (0–11).
-   Hygiene = SECURITY.md + path guard + input schema + auth signal, −1 for a hardcoded key (−1–4).
+   Hygiene = SECURITY.md + path guard + input schema + auth signal (0–4).
 4. **Key check** (`keycheck.py`): every hardcoded-key hit manually reviewed with secrets redacted.
 5. **Validate** (`dump_sample.py` + `data/hand_labels.json`): 20 repos sampled stratified by stars;
    every capability hit was shown with its code context and judged as real capability vs false

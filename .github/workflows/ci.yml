@@ -3,15 +3,21 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: "50 13 * * 1"   # weekly: catch dependency drift
+    - cron: "50 13 * * 1"   # weekly: catch breakage from runner or Python image updates
   workflow_dispatch:
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.12"
-      - run: python -m pip install pytest
+      - run: python -m pip install -r requirements-dev.txt
+      - run: ruff check .
       - run: python -m pytest -q
+      - name: Analysis reproduces the committed data
+        run: |
+          python analyze.py > /dev/null
+          python validate.py > /dev/null
+          git diff --exit-code data/

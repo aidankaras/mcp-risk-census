@@ -14,12 +14,34 @@
     "remote": 54
   },
   "mean_risk": 4.95,
-  "mean_hygiene": 2.28,
-  "spearman_stars_hygiene": -0.139,
-  "spearman_stars_risk": -0.146,
-  "hygiene_above_median_stars": 2.44,
+  "mean_hygiene": 2.29,
+  "spearman_stars_hygiene": 0.127,
+  "spearman_stars_hygiene_p": 0.189,
+  "spearman_stars_risk": 0.079,
+  "spearman_stars_risk_p": 0.414,
+  "hygiene_above_median_stars": 2.45,
   "hygiene_below_median_stars": 2.13,
   "remote_without_auth_signal": 9,
   "remote_total": 59,
-  "high_risk_low_hygiene": 8
+  "high_risk_low_hygiene": 8,
+  "excluding_likely_non_servers": {
+    "n_servers": 96,
+    "pct": {
+      "shell_exec": 65,
+      "eval_dynamic": 16,
+      "fs_write": 77,
+      "sql_raw": 8,
+      "outbound_http": 83,
+      "security_md": 35,
+      "path_guard": 38,
+      "input_schema": 79,
+      "auth_mentioned": 75,
+      "hardcoded_key": 1,
+      "remote": 54
+    },
+    "spearman_stars_hygiene": 0.132,
+    "spearman_stars_hygiene_p": 0.2,
+    "remote_without_auth_signal": 9,
+    "remote_total": 52
+  }
 }

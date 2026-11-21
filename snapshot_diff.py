@@ -26,7 +26,8 @@ def main(base_path, snap_path):
     out = ["| metric | published | rescan | change |", "|---|---|---|---|"]
     for name, a, b in rows(base, snap):
         out.append(f"| {name} | {a} | {b} | {round(b - a, 3):+} |")
-    print("Rescan with the frozen rubric against the published baseline.\n")
+    print("Rescan with the baseline scanner (rubric v1) and refreshed star counts, "
+          "against the published baseline.\n")
     print("\n".join(out))
 
 

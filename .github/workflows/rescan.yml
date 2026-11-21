@@ -1,7 +1,8 @@
 name: Monthly rescan
-# Re-scans the same candidate repos with the frozen rubric and proposes a dated
-# snapshot as a pull request. The published headline numbers are never overwritten;
-# each snapshot sits next to them so drift over time is visible.
+# Re-scans the same 250 candidate repos with the baseline scanner (rubric v1, pinned below, so
+# later edits to scan.py do not change what a snapshot measures), refreshes their star counts,
+# and proposes a dated snapshot as a pull request. The published headline numbers are never
+# overwritten; each snapshot sits next to them so drift over time is visible.
 on:
   schedule:
     - cron: "0 6 1 * *"
@@ -9,19 +10,31 @@ on:
 permissions:
   contents: write
   pull-requests: write
+env:
+  # scan.py as it was when data/scan.jsonl was produced (rubric v1). Change only together with
+  # a new published baseline.
+  BASELINE_SCANNER: 515fada0a29e7cb9d0add6adddbe48c66fb071b7
 jobs:
   rescan:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0   # needed to read the pinned scanner from history
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.12"
-      - name: Scan into a scratch copy
+      - run: python -m pip install -r requirements.txt
+      - name: Scan into a scratch copy with the baseline scanner
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p /tmp/run/data
-          cp *.py /tmp/run/ && cp data/repos.jsonl /tmp/run/data/
+          git show "$BASELINE_SCANNER:scan.py" > /tmp/run/scan.py
+          cp analyze.py /tmp/run/
+          cp data/repos.jsonl data/likely_non_servers.json /tmp/run/data/
+          python collect.py --refresh-stars /tmp/run/data/repos.jsonl
           cd /tmp/run && python scan.py && python analyze.py > /dev/null
       - name: Write dated snapshot
         run: |
@@ -31,14 +44,18 @@ jobs:
           python snapshot_diff.py data/summary.json data/snapshots/$d.json > data/snapshots/$d.md
       - name: Open pull request
         env:
-          GH_TOKEN: ${{ github.token }}
+          # Pull requests opened with the default GITHUB_TOKEN do not trigger other workflows
+          # (so CI would not run on them). Set a RESCAN_TOKEN secret (fine-grained PAT with
+          # contents + pull-requests write) to get CI on these PRs; otherwise it falls back.
+          GH_TOKEN: ${{ secrets.RESCAN_TOKEN || github.token }}
         run: |
           d=$(date -u +%Y-%m)
+          branch="snapshot/$d-run${{ github.run_id }}"   # unique, so a re-run in the same month works
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -b snapshot/$d
+          git checkout -b "$branch"
           git add data/snapshots
           git diff --cached --quiet && exit 0
           git commit -m "data: monthly rescan snapshot $d"
-          git push -u origin snapshot/$d
+          git push -u origin "$branch"
           gh pr create --title "Monthly rescan: $d" --body-file data/snapshots/$d.md

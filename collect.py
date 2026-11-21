@@ -2,7 +2,11 @@
 
 Writes data/repos.jsonl (one repo per line, deduped). Uses the gh CLI (already authed).
 """
-import json, os, subprocess, pathlib, time
+import json
+import os
+import pathlib
+import subprocess
+import time
 
 GH = os.environ.get("GH_BIN", "gh")
 OUT = pathlib.Path(__file__).parent / "data" / "repos.jsonl"

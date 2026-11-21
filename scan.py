@@ -63,7 +63,7 @@ def cloned(full_name):
     try:
         cl = subprocess.run(["git", "clone", "-q", "--depth", "1",
                              f"https://github.com/{full_name}.git", str(dest)],
-                            capture_output=True, text=True, timeout=CLONE_TIMEOUT)
+                            capture_output=True, text=True, timeout=CLONE_TIMEOUT, check=False)
         if cl.returncode != 0:
             raise CloneError(cl.stderr[-300:].strip())
         yield dest

@@ -1,6 +1,6 @@
 import re
 
-from scan import SIGNALS, HYGIENE
+from scan import HYGIENE, SIGNALS
 
 
 def hits(table, name, text):

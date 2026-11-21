@@ -19,7 +19,10 @@ def rows(base, snap, prefix=""):
 
 
 def main(base_path, snap_path):
-    base, snap = json.load(open(base_path)), json.load(open(snap_path))
+    with open(base_path) as f:
+        base = json.load(f)
+    with open(snap_path) as f:
+        snap = json.load(f)
     out = ["| metric | published | rescan | change |", "|---|---|---|---|"]
     for name, a, b in rows(base, snap):
         out.append(f"| {name} | {a} | {b} | {round(b - a, 3):+} |")

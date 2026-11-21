@@ -6,10 +6,10 @@ import random
 import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-from matplotlib.ticker import FixedLocator, FuncFormatter, NullFormatter  # noqa: E402
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FixedLocator, FuncFormatter, NullFormatter
 
-from analyze import HIGH_RISK, read_jsonl  # noqa: E402
+from analyze import HIGH_RISK, read_jsonl
 
 ROOT = pathlib.Path(__file__).parent
 OUT = ROOT / "charts"
@@ -63,7 +63,7 @@ def main():
 
     # risk score distribution
     fig, ax = plt.subplots(figsize=(7, 4))
-    ax.hist([r["risk"] for r in rows], bins=list(range(0, 13)), color="#8e44ad", edgecolor="white")
+    ax.hist([r["risk"] for r in rows], bins=list(range(13)), color="#8e44ad", edgecolor="white")
     ax.set_xlabel("Risk score (0–11)")
     ax.set_ylabel("repos")
     ax.set_title(f"Risk score distribution (n = {n})")

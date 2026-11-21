@@ -1,27 +1,50 @@
-"""Re-clone repos flagged hardcoded_key and show each hit's file + redacted context for hand review.
-Keys are redacted to their first 6 chars; full secrets are never printed or stored."""
-import json, re, subprocess, pathlib, shutil
-from scan import HYGIENE, CODE_EXT, TMP
+"""Re-clone repos flagged hardcoded_key and record each matching line, redacted, for hand review.
+
+Every key-shaped string on a line is cut to its first 6 characters before anything is printed or
+written, so full secrets are never stored. One row per matching line. Uses the same file filter
+as scan.py, so it only reports hits in files that could have raised the flag.
+"""
+import json
+import pathlib
+import re
+import subprocess
+
+from scan import HYGIENE, TMP, CloneError, cloned, find_matches, iter_code_files, read_text
 
 PAT = re.compile(HYGIENE["hardcoded_key"])
 ROOT = pathlib.Path(__file__).parent
 OUT = ROOT / "data" / "keyhits.jsonl"
-flagged = [json.loads(l) for l in (ROOT / "data/scan.jsonl").open()]
-flagged = [s["full_name"] for s in flagged if s.get("hardcoded_key")]
-TMP.mkdir(parents=True, exist_ok=True)
-with OUT.open("w") as f:
-    for name in flagged:
-        d = TMP / name.replace("/", "__")
-        shutil.rmtree(d, ignore_errors=True)
-        subprocess.run(["git", "clone", "-q", "--depth", "1", "--filter=blob:limit=300k",
-                        f"https://github.com/{name}.git", str(d)], timeout=180)
-        for p in d.rglob("*"):
-            if not p.is_file() or p.suffix not in CODE_EXT or "node_modules" in p.parts:
+
+
+def redact(line):
+    return PAT.sub(lambda m: m.group(0)[:6] + "…REDACTED", line)
+
+
+def key_hits(repo_dir):
+    for p, rel in iter_code_files(repo_dir):
+        text = read_text(p)
+        if text is None:
+            continue
+        lines = text.split("\n")
+        for ln in sorted({ln for _, ln, _ in find_matches(text, {"hardcoded_key": PAT})}):
+            yield {"file": str(rel), "line": ln, "ctx": redact(lines[ln - 1]).strip()[:160]}
+
+
+def main():
+    with (ROOT / "data/scan.jsonl").open() as f:
+        flagged = [s["full_name"] for s in map(json.loads, f) if s.get("hardcoded_key")]
+    TMP.mkdir(parents=True, exist_ok=True)
+    with OUT.open("w") as f:
+        for name in flagged:
+            try:
+                with cloned(name) as d:
+                    for hit in key_hits(d):
+                        f.write(json.dumps({"repo": name, **hit}) + "\n")
+            except (CloneError, subprocess.TimeoutExpired, OSError) as e:
+                print("skip", name, type(e).__name__, flush=True)
                 continue
-            for i, line in enumerate(p.read_text(errors="ignore").splitlines(), 1):
-                for m in PAT.finditer(line):
-                    ctx = line.replace(m.group(0), m.group(0)[:6] + "…REDACTED").strip()[:160]
-                    f.write(json.dumps({"repo": name, "file": str(p.relative_to(d)), "line": i,
-                                        "ctx": ctx}) + "\n")
-        shutil.rmtree(d, ignore_errors=True)
-        print("done", name, flush=True)
+            print("done", name, flush=True)
+
+
+if __name__ == "__main__":
+    main()
